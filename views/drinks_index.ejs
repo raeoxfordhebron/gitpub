@@ -16,5 +16,16 @@
     <h1>
         Welcome to gitPub
     </h1>
+    <ul>
+        <% for(let i = 0; i < drinks.length; i++) { %>
+            <% let splitDrinks = drinks[i].name.split("") %>
+            <% let capitalDrinks = splitDrinks[0].toUpperCase() %>
+            <% splitDrinks.splice(0, 1, capitalDrinks) %>
+            <% let joinDrinks = splitDrinks.join("") %>
+            <li>
+                <%= joinDrinks %>
+            </li>
+       <% } %>
+    </ul>
 </body>
 </html>
