@@ -9,11 +9,17 @@ app.get('/', (req, res) => {
     res.send(`Welcome to the Gitpub App!`)
 })
 
+//INDEX ROUTE
 app.get('/drinks', (req, res) => {
     res.render("drinks_index.ejs", // need to understand more about render
     {
         drinks
     })
+})
+
+//SHOW ROUTE
+app.get('/drinks/:id', (req, res) => {
+    res.send(req.params.id)
 })
 
 
