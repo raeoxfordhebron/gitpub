@@ -22,9 +22,10 @@
             <% let capitalDrinks = splitDrinks[0].toUpperCase() %>
             <% splitDrinks.splice(0, 1, capitalDrinks) %>
             <% let joinDrinks = splitDrinks.join("") %>
-            <li>
+            <a href="/drinks/<%= i %>"><li>
                 <%= joinDrinks %>
-            </li>
+                
+            </li></a>
        <% } %>
     </ul>
 </body>
