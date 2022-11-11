@@ -10,16 +10,19 @@ app.get('/', (req, res) => {
 })
 
 //INDEX ROUTE
-app.get('/drinks', (req, res) => {
+app.get('/drinks/', (req, res) => {
     res.render("drinks_index.ejs", // need to understand more about render
     {
-        drinks
+        drinks: drinks
     })
 })
 
-//SHOW ROUTE
+// //SHOW ROUTE
 app.get('/drinks/:id', (req, res) => {
-    res.send(req.params.id)
+    res.render("drinks_show.ejs", {
+        drink: drinks[req.params.id],
+        index: req.params.id
+    })
 })
 
 
